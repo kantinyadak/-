@@ -1,0 +1,6 @@
+{
+  "name": "سامانه قیمت‌گذاری دلاری و ریالی محصولات",
+  "description": "سیستم مدیریت کاتالوگ محصولات بر پایه دلار با محاسبه و تبدیل خودکار به ریال و تومان بر اساس استعلام زنده از کانال‌های تلگرام",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
