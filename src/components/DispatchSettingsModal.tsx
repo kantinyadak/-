@@ -100,8 +100,10 @@ export const DispatchSettingsModal: React.FC<DispatchSettingsModalProps> = ({
       text += `   🔸 همکار ۶٪: ${formatNumberWithCommas(calc.cooperator6Toman)} تومان\n\n`;
     });
 
+    const baseUrl = settings.appUrl?.trim() || (typeof window !== "undefined" ? window.location.origin : "https://kantinyadak-p.onrender.com");
     text += `━━━━━━━━━━━━━━━━━━━━━\n`;
-    text += `🌐 مشاهده آنلاین کاتالوگ قیمت: ${typeof window !== "undefined" ? window.location.origin : ""}/?view=prices`;
+    text += `🌐 مشاهده آنلاین کاتالوگ همکاران:\n${baseUrl}/?view=prices\n\n`;
+    text += `👥 لینک مخصوص مشتریان (قیمت مشتری بدون درصد همکار):\n${baseUrl}/?view=prices&tier=customer`;
     return text;
   };
 
@@ -263,6 +265,28 @@ export const DispatchSettingsModal: React.FC<DispatchSettingsModalProps> = ({
                 <option value="both">هر دو (بله و واتساپ)</option>
               </select>
             </div>
+          </div>
+
+          {/* App URL configuration field */}
+          <div className="bg-slate-50/80 border border-slate-200 rounded-2xl p-3.5 space-y-1.5">
+            <div className="flex items-center justify-between">
+              <label className="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                <span>🌐 آدرس دامنه سامانه (جهت درج در انتهای پیام‌های بله):</span>
+              </label>
+              <span className="text-[10px] text-indigo-600 font-mono font-medium">Auto-detected / Render URL</span>
+            </div>
+            <input
+              id="input-dispatch-app-url"
+              type="text"
+              value={settings.appUrl || "https://kantinyadak-p.onrender.com"}
+              onChange={(e) => setSettings({ ...settings, appUrl: e.target.value })}
+              placeholder="https://kantinyadak-p.onrender.com"
+              className="w-full p-2.5 bg-white border border-slate-200 rounded-xl font-mono text-xs text-indigo-700 font-semibold focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500"
+              dir="ltr"
+            />
+            <p className="text-[11px] text-slate-500 leading-relaxed">
+              این آدرس مبنای تولید لینک‌های کاتالوگ آنلاین قیمت‌ها در انتهای پیام‌های ارسالی به بله است.
+            </p>
           </div>
 
           {/* Bale Bot Settings Section */}

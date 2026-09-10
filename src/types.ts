@@ -76,6 +76,7 @@ export interface DispatchSettings {
   enabled: boolean;
   scheduledTime: string; // e.g. "12:00"
   targetService: 'bale' | 'whatsapp' | 'both';
+  appUrl?: string; // Web domain e.g. https://kantinyadak-p.onrender.com
   baleBotToken?: string;
   baleChatId?: string;
   whatsappType?: 'callmebot' | 'webhook';

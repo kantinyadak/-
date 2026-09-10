@@ -80,6 +80,7 @@ interface DispatchSettings {
   enabled: boolean;
   scheduledTime: string; // e.g. "12:00"
   targetService: 'bale' | 'whatsapp' | 'both';
+  appUrl?: string;
   baleBotToken?: string;
   baleChatId?: string;
   whatsappType?: 'callmebot' | 'webhook';
@@ -271,12 +272,14 @@ function readDb(): DatabaseSchema {
       settings: { ...defaultDb.settings, ...parsed.settings },
       rateHistory: Array.isArray(parsed.rateHistory) ? parsed.rateHistory : defaultDb.rateHistory,
       priceHistory: Array.isArray(parsed.priceHistory) ? parsed.priceHistory : [],
-      dispatchSettings: parsed.dispatchSettings || {
+      dispatchSettings: {
         enabled: true,
         scheduledTime: "12:00",
         targetService: "bale",
+        appUrl: "https://kantinyadak-p.onrender.com",
         baleBotToken: "2013305231:91efktDoG9PrJ0TOExnUzvFniu6ihnI658I",
-        baleChatId: "115840157",
+        baleChatId: "@kantinp, 115840157",
+        ...(parsed.dispatchSettings || {}),
       },
       dispatchLogs: Array.isArray(parsed.dispatchLogs) ? parsed.dispatchLogs : [],
     };
@@ -1194,6 +1197,19 @@ async function fetchAndApplyLatestRate(channelName?: string): Promise<{ success:
 }
 
 // 9. Automated Daily Dispatch Helpers (Bale & WhatsApp)
+function getAppBaseUrl(db?: DatabaseSchema): string {
+  if (db?.dispatchSettings?.appUrl && db.dispatchSettings.appUrl.trim()) {
+    return db.dispatchSettings.appUrl.trim().replace(/\/+$/, "");
+  }
+  if (process.env.RENDER_EXTERNAL_URL && process.env.RENDER_EXTERNAL_URL.trim()) {
+    return process.env.RENDER_EXTERNAL_URL.trim().replace(/\/+$/, "");
+  }
+  if (process.env.APP_URL && process.env.APP_URL.trim()) {
+    return process.env.APP_URL.trim().replace(/\/+$/, "");
+  }
+  return "https://kantinyadak-p.onrender.com";
+}
+
 function formatThreeTierPriceMessage(db: DatabaseSchema): string {
   const currentRate = db.currentRate?.rateInToman || 235490;
   let tehranDateStr = "";
@@ -1220,8 +1236,10 @@ function formatThreeTierPriceMessage(db: DatabaseSchema): string {
     text += `   🔸 همکار ۶٪: ${Math.round(calc.cooperator6Rial / 10).toLocaleString("fa-IR")} تومان\n\n`;
   });
 
+  const baseUrl = getAppBaseUrl(db);
   text += `━━━━━━━━━━━━━━━━━━━━━\n`;
-  text += `🌐 مشاهده آنلاین کاتالوگ قیمت: ${process.env.APP_URL || ""}/?view=prices`;
+  text += `🌐 مشاهده آنلاین کاتالوگ همکاران:\n${baseUrl}/?view=prices\n\n`;
+  text += `👥 لینک مخصوص مشتریان (قیمت مشتری بدون درصد همکار):\n${baseUrl}/?view=prices&tier=customer`;
   return text;
 }
 
@@ -1425,6 +1443,28 @@ app.post("/api/dispatch/test", async (req: Request, res: Response) => {
   } else {
     res.status(400).json({ success: false, error: result.error, logs: result.logs });
   }
+});
+
+// Direct Webhook / Trigger endpoint for external Cron services (like cron-job.org)
+app.all(["/api/dispatch/trigger", "/api/dispatch/cron"], async (req: Request, res: Response) => {
+  console.log("[AutoDispatch] Direct trigger endpoint invoked by caller:", req.ip);
+  const db = readDb();
+  const settings = db.dispatchSettings || {
+    enabled: true,
+    scheduledTime: "12:00",
+    targetService: "bale",
+    appUrl: "https://kantinyadak-p.onrender.com",
+    baleBotToken: "2013305231:91efktDoG9PrJ0TOExnUzvFniu6ihnI658I",
+    baleChatId: "@kantinp, 115840157",
+  };
+  const result = await executeDispatch(db, settings);
+  res.json({
+    success: result.success,
+    triggeredAt: new Date().toISOString(),
+    error: result.error || null,
+    logsCount: result.logs?.length || 0,
+    lastLog: result.logs?.[0] || null,
+  });
 });
 
 // 11. Background Interval Scheduler for 12:00 Tehran Time

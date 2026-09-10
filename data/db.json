@@ -12,6 +12,21 @@
       "notes": "لاستیک نوار ۸ طوسی",
       "priceHistory": [
         {
+          "id": "ph_1789033919549_cs50",
+          "productId": "prod_rubber_8_grey",
+          "timestamp": "2026-09-10T09:51:59.549Z",
+          "dollarRateInToman": 234570,
+          "dollarRateInRial": 2345700,
+          "priceInRial": 8680000,
+          "priceInToman": 868000,
+          "usdPrice": 3.7,
+          "shippingUsd": 0,
+          "profitMarginPercent": 0,
+          "cooperator3Rial": 8420000,
+          "cooperator6Rial": 8160000,
+          "note": "استعلام خودکار نرخ پیش از ارسال روزانه (@irancurrency)"
+        },
+        {
           "id": "ph_1789030677509_y8fg",
           "productId": "prod_rubber_8_grey",
           "timestamp": "2026-09-10T08:57:57.509Z",
@@ -326,6 +341,21 @@
       "stock": 100,
       "notes": "لاستیک نوار ۸ مشکی",
       "priceHistory": [
+        {
+          "id": "ph_1789033919549_qa4q",
+          "productId": "prod_rubber_8_black",
+          "timestamp": "2026-09-10T09:51:59.549Z",
+          "dollarRateInToman": 234570,
+          "dollarRateInRial": 2345700,
+          "priceInRial": 8210000,
+          "priceInToman": 821000,
+          "usdPrice": 3.5,
+          "shippingUsd": 0,
+          "profitMarginPercent": 0,
+          "cooperator3Rial": 7960000,
+          "cooperator6Rial": 7720000,
+          "note": "استعلام خودکار نرخ پیش از ارسال روزانه (@irancurrency)"
+        },
         {
           "id": "ph_1789030677509_vyrs",
           "productId": "prod_rubber_8_black",
@@ -642,6 +672,21 @@
       "notes": "لاستیک نوار ۸ مشکی ۴ لبه",
       "priceHistory": [
         {
+          "id": "ph_1789033919549_xh6a",
+          "productId": "prod_rubber_8_black_4l",
+          "timestamp": "2026-09-10T09:51:59.549Z",
+          "dollarRateInToman": 234570,
+          "dollarRateInRial": 2345700,
+          "priceInRial": 8210000,
+          "priceInToman": 821000,
+          "usdPrice": 3.5,
+          "shippingUsd": 0,
+          "profitMarginPercent": 0,
+          "cooperator3Rial": 7960000,
+          "cooperator6Rial": 7720000,
+          "note": "استعلام خودکار نرخ پیش از ارسال روزانه (@irancurrency)"
+        },
+        {
           "id": "ph_1789030677509_i955",
           "productId": "prod_rubber_8_black_4l",
           "timestamp": "2026-09-10T08:57:57.509Z",
@@ -956,6 +1001,21 @@
       "stock": 100,
       "notes": "لاستیک سایز ۶",
       "priceHistory": [
+        {
+          "id": "ph_1789033919549_rv81",
+          "productId": "prod_rubber_6",
+          "timestamp": "2026-09-10T09:51:59.549Z",
+          "dollarRateInToman": 234570,
+          "dollarRateInRial": 2345700,
+          "priceInRial": 8050000,
+          "priceInToman": 805000,
+          "usdPrice": 3.43,
+          "shippingUsd": 0,
+          "profitMarginPercent": 0,
+          "cooperator3Rial": 7800000,
+          "cooperator6Rial": 7560000,
+          "note": "استعلام خودکار نرخ پیش از ارسال روزانه (@irancurrency)"
+        },
         {
           "id": "ph_1789030677509_cayl",
           "productId": "prod_rubber_6",
@@ -1272,6 +1332,21 @@
       "notes": "لاستیک سایز ۵.۵",
       "priceHistory": [
         {
+          "id": "ph_1789033919549_wxdp",
+          "productId": "prod_rubber_5_5",
+          "timestamp": "2026-09-10T09:51:59.549Z",
+          "dollarRateInToman": 234570,
+          "dollarRateInRial": 2345700,
+          "priceInRial": 7510000,
+          "priceInToman": 751000,
+          "usdPrice": 3.2,
+          "shippingUsd": 0,
+          "profitMarginPercent": 0,
+          "cooperator3Rial": 7280000,
+          "cooperator6Rial": 7060000,
+          "note": "استعلام خودکار نرخ پیش از ارسال روزانه (@irancurrency)"
+        },
+        {
           "id": "ph_1789030677509_u086",
           "productId": "prod_rubber_5_5",
           "timestamp": "2026-09-10T08:57:57.509Z",
@@ -1586,6 +1661,21 @@
       "stock": 100,
       "notes": "لاستیک سایز ۲، ۳ و ۴",
       "priceHistory": [
+        {
+          "id": "ph_1789033919549_bnve",
+          "productId": "prod_rubber_2_3_4",
+          "timestamp": "2026-09-10T09:51:59.549Z",
+          "dollarRateInToman": 234570,
+          "dollarRateInRial": 2345700,
+          "priceInRial": 6100000,
+          "priceInToman": 610000,
+          "usdPrice": 2.6,
+          "shippingUsd": 0,
+          "profitMarginPercent": 0,
+          "cooperator3Rial": 5920000,
+          "cooperator6Rial": 5730000,
+          "note": "استعلام خودکار نرخ پیش از ارسال روزانه (@irancurrency)"
+        },
         {
           "id": "ph_1789030677509_5i5y",
           "productId": "prod_rubber_2_3_4",
@@ -1902,6 +1992,21 @@
       "notes": "لاستیک / نوار پارتیشنی",
       "priceHistory": [
         {
+          "id": "ph_1789033919549_ec9e",
+          "productId": "prod_partition",
+          "timestamp": "2026-09-10T09:51:59.549Z",
+          "dollarRateInToman": 234570,
+          "dollarRateInRial": 2345700,
+          "priceInRial": 8210000,
+          "priceInToman": 821000,
+          "usdPrice": 3.5,
+          "shippingUsd": 0,
+          "profitMarginPercent": 0,
+          "cooperator3Rial": 7960000,
+          "cooperator6Rial": 7720000,
+          "note": "استعلام خودکار نرخ پیش از ارسال روزانه (@irancurrency)"
+        },
+        {
           "id": "ph_1789030677509_4ahv",
           "productId": "prod_partition",
           "timestamp": "2026-09-10T08:57:57.509Z",
@@ -2217,6 +2322,21 @@
       "notes": "عایق شیبدار",
       "priceHistory": [
         {
+          "id": "ph_1789033919549_bhf4",
+          "productId": "prod_sloped_insulation",
+          "timestamp": "2026-09-10T09:51:59.549Z",
+          "dollarRateInToman": 234570,
+          "dollarRateInRial": 2345700,
+          "priceInRial": 6100000,
+          "priceInToman": 610000,
+          "usdPrice": 2.6,
+          "shippingUsd": 0,
+          "profitMarginPercent": 0,
+          "cooperator3Rial": 5920000,
+          "cooperator6Rial": 5730000,
+          "note": "استعلام خودکار نرخ پیش از ارسال روزانه (@irancurrency)"
+        },
+        {
           "id": "ph_1789030677509_cgm8",
           "productId": "prod_sloped_insulation",
           "timestamp": "2026-09-10T08:57:57.509Z",
@@ -2524,11 +2644,11 @@
   "currentRate": {
     "channelUsername": "irancurrency",
     "sourceType": "telegram",
-    "rateInToman": 234840,
-    "rateInRial": 2348400,
-    "lastUpdated": "2026-09-10T08:57:57.509Z",
-    "rawPostText": "💵 دلار: 234,840",
-    "detectedPostTime": "پنجشنبه ۱۹ شهریور ۱۴۰۵ - ۱۲:۲۶",
+    "rateInToman": 234570,
+    "rateInRial": 2345700,
+    "lastUpdated": "2026-09-10T09:51:59.549Z",
+    "rawPostText": "💵 دلار: 234,570",
+    "detectedPostTime": "پنجشنبه ۱۹ شهریور ۱۴۰۵ - ۱۳:۲۰",
     "status": "success",
     "confidenceScore": 90,
     "extractedFromChannel": "irancurrency"
@@ -2542,6 +2662,13 @@
     "roundCalculations": true
   },
   "rateHistory": [
+    {
+      "id": "hist_1789033919549",
+      "rateInToman": 234570,
+      "timestamp": "2026-09-10T09:51:59.549Z",
+      "channel": "irancurrency",
+      "method": "استعلام خودکار پیش از ارسال پیام"
+    },
     {
       "id": "hist_1789030677509",
       "rateInToman": 234840,
@@ -2702,12 +2829,20 @@
     "enabled": true,
     "scheduledTime": "12:00",
     "targetService": "bale",
+    "appUrl": "https://kantinyadak-p.onrender.com",
     "baleBotToken": "2013305231:91efktDoG9PrJ0TOExnUzvFniu6ihnI658I",
     "baleChatId": "@kantinp, 115840157",
     "lastStatus": "success",
     "lastLogMessage": "ارسال با موفقیت انجام شد"
   },
   "dispatchLogs": [
+    {
+      "id": "log_bale_1789033920447",
+      "timestamp": "2026-09-10T09:52:00.447Z",
+      "targetService": "bale",
+      "status": "success",
+      "messagePreview": "📢 لیست قیمت روز محصولات\n🗓 تاریخ: ۱۴۰۵ شهریور ۱۹, پنجشنبه س..."
+    },
     {
       "id": "log_bale_1789030678541",
       "timestamp": "2026-09-10T08:57:58.541Z",
